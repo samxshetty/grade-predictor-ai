@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Result - GradePredictorAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/result.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GradePredictorAI</div>
+        <a href="form.html" class="nav-back">← Predict Again</a>
+    </nav>
+
+    <div class="result-container">
+
+        <div class="cgpa-card">
+            <p class="cgpa-label">Your Predicted Final CGPA</p>
+            <div class="cgpa-number" id="cgpaDisplay">0.00</div>
+            <div class="grade-badge" id="gradeBadge">-</div>
+            <div class="risk-badge" id="riskBadge">-</div>
+        </div>
+
+        <div class="insight-card" id="insightCard">
+            <h3>📊 What This Means</h3>
+            <p id="insightText"></p>
+        </div>
+
+        <div class="chart-card">
+            <h3>🔍 What's Affecting Your CGPA</h3>
+            <p class="chart-desc">Based on 27 factors analysed by the AI model</p>
+            <div class="chart-container" id="chartContainer"></div>
+        </div>
+
+        <div class="whatif-card">
+            <h3>🎮 What-If Simulator</h3>
+            <p class="chart-desc">Drag the sliders to see how changes affect your predicted CGPA</p>
+
+            <div class="slider-group">
+                <div class="slider-row">
+                    <label>Study Hours Per Day: <span id="studytimeVal">-</span></label>
+                    <input type="range" id="studytimeSlider" min="0.5" max="8" step="0.5">
+                </div>
+
+                <div class="slider-row">
+                    <label>Days Absent: <span id="absencesVal">-</span></label>
+                    <input type="range" id="absencesSlider" min="0" max="40" step="1">
+                </div>
+
+                <div class="slider-row">
+                    <label>Lecture Hours Attended Per Day: <span id="lectureVal">-</span></label>
+                    <input type="range" id="lectureSlider" min="0" max="6" step="0.5">
+                </div>
+            </div>
+
+            <div class="whatif-result">
+                <div class="whatif-cgpa">
+                    <p>New Predicted CGPA</p>
+                    <h2 id="whatifCgpa">-</h2>
+                </div>
+                <div class="whatif-diff" id="whatifDiff"></div>
+            </div>
+        </div>
+
+        <div class="comparison-card">
+            <h3>📈 You vs Dataset Average</h3>
+            <div class="comparison-row">
+                <span>Dataset Average</span>
+                <div class="comp-bar-container">
+                    <div class="comp-bar avg-bar" id="avgBar"></div>
+                </div>
+                <span>5.40</span>
+            </div>
+            <div class="comparison-row">
+                <span>Your Prediction</span>
+                <div class="comp-bar-container">
+                    <div class="comp-bar your-bar" id="yourBar"></div>
+                </div>
+                <span id="yourCgpaText">-</span>
+            </div>
+        </div>
+
+        <div class="tips-card" id="tipsCard">
+            <h3>💡 Personalised Tips</h3>
+            <div id="tipsList"></div>
+        </div>
+
+        <a href="form.html" class="cta-btn" style="display:block; text-align:center; margin-top:40px;">
+            Try Different Values →
+        </a>
+
+    </div>
+
+    <script src="js/result.js"></script>
+</body>
+</html>
