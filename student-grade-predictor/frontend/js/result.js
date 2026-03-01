@@ -120,7 +120,7 @@ async function fetchWhatIf() {
     };
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/whatif', {
+        const response = await fetch('https://grade-predictor-ai.onrender.com/whatif', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(modifiedData)
