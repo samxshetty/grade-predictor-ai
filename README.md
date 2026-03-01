@@ -1,21 +1,17 @@
-# 🎓 GradeAI — Student Grade Predictor
+# 🎓 GradePredictorAI — Student Grade Predictor
 
-A full stack Machine Learning web application that predicts a student's final semester CGPA based on 27 factors including subject scores, study habits, attendance, and family background.
+This is my first machine learning project. A full stack Machine Learning web application that predicts a student's final semester CGPA based on 27 factors including subject scores, study habits, attendance, and family background.
 
-> Built by first year engineering students at NMAMIT as a complete end-to-end ML project.
 
 ---
 
 ## 🔗 Live Demo
 
-| | Link |
-|---|---|
-| **Frontend** | https://samxshetty.github.io/grade-predictor-ai |
-| **Backend API** | https://grade-predictor-ai.onrender.com |
-
+| | Link | |
+https://samxshetty.github.io/grade-predictor-ai
 ---
 
-## 📸 Features
+## Features
 
 - **4-Step Form** — Clean multi-step form with validation collecting 27 student attributes
 - **AI Prediction** — Random Forest model predicts final CGPA out of 10
@@ -27,7 +23,7 @@ A full stack Machine Learning web application that predicts a student's final se
 
 ---
 
-## 🧠 Machine Learning
+## Machine Learning
 
 ### Dataset
 - **1000 Indian engineering students** (synthetic, realistically generated)
@@ -35,7 +31,7 @@ A full stack Machine Learning web application that predicts a student's final se
 - Colleges: NMAMIT, NITK, MSRIT, VIT, SRM, PESIT, RV College, BIT Mesra
 - Cities: Mangalore, Bangalore, Mumbai, Pune, Hyderabad, Chennai, Delhi, Udupi, Mysore, Navi Mumbai
 
-### Features Used (27)
+### Features Used
 
 | Category | Features |
 |---|---|
@@ -80,7 +76,7 @@ lecture_hrs_attended    3.05%
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 grade-predictor-ai/
@@ -118,7 +114,7 @@ grade-predictor-ai/
 
 ---
 
-## 🔌 API Reference
+## API Reference
 
 ### Base URL
 ```
@@ -209,7 +205,7 @@ What-if simulator endpoint. Same input as /predict but returns only CGPA, grade 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -223,7 +219,7 @@ What-if simulator endpoint. Same input as /predict but returns only CGPA, grade 
 
 ---
 
-## 🚀 Running Locally
+## Running Locally
 
 ### Prerequisites
 - Python 3.x
@@ -254,7 +250,7 @@ Open `index.html` in your browser directly or use VS Code Live Server.
 
 ---
 
-## 📊 How the ML Pipeline Works
+## How the ML Pipeline Works
 
 ```
 Raw CSV (1000 students, 28 columns)
@@ -284,7 +280,7 @@ result.js  — renders animated result, chart, simulator
 
 ---
 
-## 📁 ML Artifacts
+## ML Artifacts
 
 | File | Description |
 |---|---|
@@ -294,18 +290,16 @@ result.js  — renders animated result, chart, simulator
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This tool is built for educational purposes only. Predictions are based on a synthetic dataset of 1000 students and should not be used as a definitive academic assessment. Actual performance depends on many factors not captured in this model.
 
 ---
 
-## 👨‍💻 Authors
-
-Built by first year B.E. students at NMAMIT, Nitte.
-
+## Authors
+Samridh S Shetty
+Samarth R Shenoy
 ---
 
 ## 📄 License
-
 MIT License — free to use, modify, and distribute.
