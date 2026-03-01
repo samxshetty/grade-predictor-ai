@@ -1,9 +1,12 @@
 import numpy as np
 import joblib
+import os
 
-model = joblib.load('model.pkl')
-scaler = joblib.load('scaler.pkl')
-label_encoders = joblib.load('label_encoders.pkl')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model = joblib.load(os.path.join(BASE_DIR, "model.pkl"))
+scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
+label_encoders = joblib.load(os.path.join(BASE_DIR, "label_encoders.pkl"))
 
 def predict_cgpa(data):
     binary_cols = ['coaching', 'activities', 'higher', 'romantic']
