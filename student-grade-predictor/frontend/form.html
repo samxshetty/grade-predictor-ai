@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details - GradePredictorAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GradePredictorAI</div>
+        <a href="index.html" class="nav-back">← Back</a>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="step-label" id="stepLabel">Step 1 of 4</div>
+
+    <div class="form-container">
+
+        <!-- Personal and Family -->
+        <div class="step-section active" id="step1">
+            <h2>Personal & Family Background</h2>
+            <p class="step-desc">Tell us about yourself and your family</p>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>College</label>
+                    <select id="school">
+                        <option value="">Select College</option>
+                        <option value="NMAMIT">NMAMIT</option>
+                        <option value="NITK">NITK</option>
+                        <option value="MSRIT">MSRIT</option>
+                        <option value="BIT Mesra">BIT Mesra</option>
+                        <option value="VIT">VIT</option>
+                        <option value="SRM">SRM</option>
+                        <option value="PESIT">PESIT</option>
+                        <option value="RV College">RV College</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <select id="sex">
+                        <option value="">Select Gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" id="age" placeholder="Enter your age" min="17" max="25">
+                </div>
+
+                <div class="form-group">
+                    <label>City</label>
+                    <select id="city">
+                        <option value="">Select City</option>
+                        <option value="Mangalore">Mangalore</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Navi Mumbai">Navi Mumbai</option>
+                        <option value="Udupi">Udupi</option>
+                        <option value="Mysore">Mysore</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Family Size</label>
+                    <select id="fam_size">
+                        <option value="">Select Family Size</option>
+                        <option value="<=3">3 or less</option>
+                        <option value=">3">More than 3</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Mother's Education</label>
+                    <select id="medu">
+                        <option value="">Select</option>
+                        <option value="0">No Education</option>
+                        <option value="1">Primary School</option>
+                        <option value="2">Middle School</option>
+                        <option value="3">Secondary School</option>
+                        <option value="4">Higher Education</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Father's Education</label>
+                    <select id="fedu">
+                        <option value="">Select</option>
+                        <option value="0">No Education</option>
+                        <option value="1">Primary School</option>
+                        <option value="2">Middle School</option>
+                        <option value="3">Secondary School</option>
+                        <option value="4">Higher Education</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Mother's Job</label>
+                    <select id="mjob">
+                        <option value="">Select</option>
+                        <option value="Engineer">Engineer</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Business">Business</option>
+                        <option value="Government">Government</option>
+                        <option value="Doctor">Doctor</option>
+                        <option value="Farmer">Farmer</option>
+                        <option value="Labour">Labour</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Father's Job</label>
+                    <select id="fjob">
+                        <option value="">Select</option>
+                        <option value="Engineer">Engineer</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Business">Business</option>
+                        <option value="Government">Government</option>
+                        <option value="Doctor">Doctor</option>
+                        <option value="Farmer">Farmer</option>
+                        <option value="Labour">Labour</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Family Relationship Quality</label>
+                    <select id="famrel">
+                        <option value="">Select</option>
+                        <option value="1">1 - Very Bad</option>
+                        <option value="2">2 - Bad</option>
+                        <option value="3">3 - Average</option>
+                        <option value="4">4 - Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Reason for Choosing College</label>
+                    <select id="reason">
+                        <option value="">Select</option>
+                        <option value="Reputation">Reputation</option>
+                        <option value="Course">Course</option>
+                        <option value="Placement">Placement</option>
+                        <option value="Family Pressure">Family Pressure</option>
+                        <option value="Proximity">Proximity</option>
+                        <option value="Scholarship">Scholarship</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="next-btn" onclick="nextStep(2)">Next →</button>
+        </div>
+
+        <!-- Habits -->
+        <div class="step-section" id="step2">
+            <h2>Habits</h2>
+            <p class="step-desc">Tell us about your study routine</p>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Travel Time to College</label>
+                    <select id="traveltime">
+                        <option value="">Select</option>
+                        <option value="1">Less than 15 min</option>
+                        <option value="2">15 to 30 min</option>
+                        <option value="3">30 to 60 min</option>
+                        <option value="4">More than 1 hour</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Daily Study Hours (outside class)</label>
+                    <input type="number" id="studytime_daily_hrs" placeholder="e.g. 3.5" min="0" max="12" step="0.5">
+                </div>
+
+                <div class="form-group">
+                    <label>Attend Coaching?</label>
+                    <select id="coaching">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Extracurricular Activities?</label>
+                    <select id="activities">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Want to Pursue Higher Education?</label>
+                    <select id="higher">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>In a Relationship?</label>
+                    <select id="romantic">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Free Time After College</label>
+                    <select id="freetime">
+                        <option value="">Select</option>
+                        <option value="1">1 - Very Low</option>
+                        <option value="2">2 - Low</option>
+                        <option value="3">3 - Medium</option>
+                        <option value="4">4 - High</option>
+                        <option value="5">5 - Very High</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Current Health Status</label>
+                    <select id="health">
+                        <option value="">Select</option>
+                        <option value="1">1 - Very Bad</option>
+                        <option value="2">2 - Bad</option>
+                        <option value="3">3 - Average</option>
+                        <option value="4">4 - Good</option>
+                        <option value="5">5 - Very Good</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Days Absent This Semester</label>
+                    <input type="number" id="absences" placeholder="e.g. 8" min="0" max="60">
+                </div>
+
+                <div class="form-group">
+                    <label>Avg Lecture Hours Attended Per Day</label>
+                    <input type="number" id="lecture_hrs_attended" placeholder="e.g. 4.5" min="0" max="8" step="0.5">
+                </div>
+            </div>
+
+            <div class="btn-row">
+                <button class="back-btn" onclick="prevStep(1)">← Back</button>
+                <button class="next-btn" onclick="nextStep(3)">Next →</button>
+            </div>
+        </div>
+
+        <!-- Academic History -->
+        <div class="step-section" id="step3">
+            <h2>Academic History</h2>
+            <p class="step-desc">Your previous academic performance</p>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Previous Semester CGPA (out of 10)</label>
+                    <input type="number" id="prev_cgpa" placeholder="e.g. 7.2" min="0" max="10" step="0.01">
+                </div>
+            </div>
+
+            <div class="btn-row">
+                <button class="back-btn" onclick="prevStep(2)">← Back</button>
+                <button class="next-btn" onclick="nextStep(4)">Next →</button>
+            </div>
+        </div>
+
+        <!-- Subject Scores -->
+        <div class="step-section" id="step4">
+            <h2>Subject Scores</h2>
+            <p class="step-desc">Enter your recent sem marks (out of 100)</p>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Mathematics</label>
+                    <input type="number" id="math_score" placeholder="e.g. 72" min="0" max="100">
+                </div>
+
+                <div class="form-group">
+                    <label>Physics / Applied Science</label>
+                    <input type="number" id="physics_score" placeholder="e.g. 65" min="0" max="100">
+                </div>
+
+                <div class="form-group">
+                    <label>Programming / CS</label>
+                    <input type="number" id="programming_score" placeholder="e.g. 80" min="0" max="100">
+                </div>
+
+                <div class="form-group">
+                    <label>Electronics</label>
+                    <input type="number" id="electronics_score" placeholder="e.g. 70" min="0" max="100">
+                </div>
+
+                <div class="form-group">
+                    <label>English / Communication</label>
+                    <input type="number" id="english_score" placeholder="e.g. 75" min="0" max="100">
+                </div>
+            </div>
+
+            <div class="btn-row">
+                <button class="back-btn" onclick="prevStep(3)">← Back</button>
+                <button class="predict-btn" onclick="submitForm()">
+                    Predict My CGPA
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading-section" id="loadingSection">
+            <div class="spinner"></div>
+            <p>Analysing your profile...</p>
+        </div>
+
+    </div>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
